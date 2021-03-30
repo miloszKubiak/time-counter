@@ -15,10 +15,18 @@ const secondsCount = document.querySelector('.seconds-count');
 
 const saveBtn = document.querySelector('.save');
 const eventSpan = document.querySelector('.event')
-let userTime;
+let usersTime;
+
+const appUpdate = () => {
+    eventSpan.textContent = eventName.value;
+    usersTime = new Date(`${eventMonth.value} ${eventDay.value} ${eventYear.value}`);
+    imageSection.style.backgroundImage = `url('${eventImg.value}')`;
+}
 
 settingsBtn.addEventListener('click', () => {
     settings.classList.toggle('active')
 })
+
+saveBtn.addEventListener('click', appUpdate);
 
 
