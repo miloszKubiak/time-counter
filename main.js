@@ -38,12 +38,13 @@ const appUpdate = () => {
     setTime();
 }
 
-appUpdate();
-
 settingsBtn.addEventListener('click', () => {
     settings.classList.toggle('active')
 })
 
 saveBtn.addEventListener('click', appUpdate);
+
+appUpdate();
+setInterval(setTime, 1000);
 
 
